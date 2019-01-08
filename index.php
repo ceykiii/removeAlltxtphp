@@ -1,4 +1,6 @@
 <?php 
+
+//file path ;
 $path='../src';
 $files=scandir($path);
 //print_r($files);
@@ -8,11 +10,10 @@ foreach ($files as $key => $value) {
    $dt= $path."/".$value ;
    $file_parts = pathinfo($dt); 
    if($file_parts["extension"]=="txt"){ 
-   		 $cs=unlink($dt); 
-   		 if($cs){
-   		 	 $a++;
-   		 
-   }
+       $cs=unlink($dt); 
+       if($cs){
+          $a++; 
+       }
     
 }
 
